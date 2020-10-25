@@ -20,85 +20,87 @@ public class HumanResources {
     public static ArrayList<Staff> staffList = new ArrayList<>();
 
     public static void main(String[] args) {
-//        addTestData(); //
+        addIntialData(); //
+        addDepartments();
         UI.greeting();
         UI.displayMenu();
         process();
     }
 
+    private static void addDepartments() {
+    }
+
     /**
      * Adds data to test
      */
-    private static void addTestData() {
-        //TODO: delete
+    private static void addIntialData() {
         Department dept1 = new Department("dept1", "Sale");
         departments.add(dept1);
-
         Department dept2 = new Department("dept2", "Tech");
         departments.add(dept2);
-
         Department dept3 = new Department("dept3", "Security");
         departments.add(dept3);
 
         //add Managers
-        Manager m1 = new Manager("m1", "Tom", "Business Leader", 40, 5.4, LocalDate.of(2000, 1, 30),
-                dept1, 10, 0);
-        for (Department dept : departments
-        ) {
-            if (dept.getName().equalsIgnoreCase(m1.getDepartment().getName())) {
-                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
-            }
-
-        }
-        m1.setSalary();
-        staffList.add(m1);
-
-        Manager m2 = new Manager("m2", "Holland", "Project Leader", 30, 3.0, LocalDate.of(2010, 5, 4),
-                dept2, 15, 0);
-        for (Department dept : departments
-        ) {
-            if (dept.getName().equalsIgnoreCase(m2.getDepartment().getName())) {
-                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
-            }
-
-        }
-        m2.setSalary();
-        staffList.add(m2);
-
-        //add Employees
-        Employee e1 = new Employee("e1", "Cris", 20, 3, LocalDate.of(2020, 10, 10), dept1,
-                20, 10.4, 0);
-        for (Department dept : departments
-        ) {
-            if (dept.getName().equalsIgnoreCase(e1.getDepartment().getName())) {
-                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
-            }
-
-        }
-        e1.setSalary();
-        staffList.add(e1);
-
-        Employee e2 = new Employee("e2", "Tim", 26, 3.0, LocalDate.of(2019, 11, 10), dept2,
-                10, 20, 0);
-        for (Department dept : departments
-        ) {
-            if (dept.getName().equalsIgnoreCase(e2.getDepartment().getName())) {
-                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
-            }
-        }
-        e2.setSalary();
-        staffList.add(e2);
-
-        Employee e3 = new Employee("e3", "Musk", 33, 1.5, LocalDate.of(2015, 3, 2), dept3,
-                3, 10, 0);
-        for (Department dept : departments
-        ) {
-            if (dept.getName().equalsIgnoreCase(e3.getDepartment().getName())) {
-                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
-            }
-        }
-        e3.setSalary();
-        staffList.add(e3);
+//        Manager m1 = new Manager("m1", "Tom", "Business Leader", 40, 5.4, LocalDate.of(2000, 1, 30),
+//                dept1, 10, 0);
+//        for (Department dept : departments
+//        ) {
+//            if (dept.getName().equalsIgnoreCase(m1.getDepartment().getName())) {
+//                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
+//            }
+//
+//        }
+//        m1.setSalary();
+//        staffList.add(m1);
+//
+//        Manager m2 = new Manager("m2", "Holland", "Project Leader", 30, 3.0, LocalDate.of(2010, 5, 4),
+//                dept2, 15, 0);
+//        for (Department dept : departments
+//        ) {
+//            if (dept.getName().equalsIgnoreCase(m2.getDepartment().getName())) {
+//                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
+//            }
+//
+//        }
+//        m2.setSalary();
+//        staffList.add(m2);
+//
+        
+//        //add Employees
+//        Employee e1 = new Employee("e1", "Cris", 20, 3, LocalDate.of(2020, 10, 10), dept1,
+//                20, 10.4, 0);
+//        for (Department dept : departments
+//        ) {
+//            if (dept.getName().equalsIgnoreCase(e1.getDepartment().getName())) {
+//                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
+//            }
+//
+//        }
+//        e1.setSalary();
+//        staffList.add(e1);
+//
+//        Employee e2 = new Employee("e2", "Tim", 26, 3.0, LocalDate.of(2019, 11, 10), dept2,
+//                10, 20, 0);
+//        for (Department dept : departments
+//        ) {
+//            if (dept.getName().equalsIgnoreCase(e2.getDepartment().getName())) {
+//                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
+//            }
+//        }
+//        e2.setSalary();
+//        staffList.add(e2);
+//
+//        Employee e3 = new Employee("e3", "Musk", 33, 1.5, LocalDate.of(2015, 3, 2), dept3,
+//                3, 10, 0);
+//        for (Department dept : departments
+//        ) {
+//            if (dept.getName().equalsIgnoreCase(e3.getDepartment().getName())) {
+//                dept.setEmployeesNum(dept.getEmployeesNum() + 1);
+//            }
+//        }
+//        e3.setSalary();
+//        staffList.add(e3);
     }
 
     /**
